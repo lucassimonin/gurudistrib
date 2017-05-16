@@ -1,18 +1,28 @@
 <?php
 
-require_once('sendmail.php');
+require 'PHPMailerAutoload.php';
 
+if($_SERVER['REQUEST_METHOD'] == "POST") {
+	$mail = new PHPMailer();  // Cree un nouvel objet PHPMailer
+	$mail->isSMTP();
+	$mail->SMTPDebug = 0;  // debogage: 1 = Erreurs et messages, 2 = messages seulement
+	$mail->SMTPAuth = true;  // Authentification SMTP active
+	$mail->SMTPSecure = 'ssl'; // Gmail REQUIERT Le transfert securise
+	$mail->Host = 'smtp.gmail.com';
+	$mail->Port = 465;
+	$mail->Username = 'momar.gurubeer@gmail.com';
+	$mail->Password = 'MDPstewart7';
+	$mail->From = $_POST['email'];
+	$mail->FromName = $_POST['firstname'];
+	$mail->Subject = $_POST['subject'];
+	$mail->Body = $_POST['body'] . "\n" . $_POST['email'];
+	$mail->AddAddress('momar.diop1@gmail.com');
 
-
-	if($_SERVER['REQUEST_METHOD'] == "POST")
-
-	{
-		$result = smtpmailer('momar.diop1@gmail.com', $_POST['email'], $_POST['firstname'], $_POST['subject'], $_POST['body'] . "\n" . $_POST['email']);
-                if (true !== $result)
-		{
-			echo $result;
-		} else {
-			echo "en cours d'envoi";
-		}
+	if(!$mail->send()) {
+		echo 'Message could not be sent.';
+		echo 'Mailer Error: ' . $mail->ErrorInfo;
+	} else {
+		echo 'Message has been sent';
 	}
+}
 ?>
