@@ -1,6 +1,6 @@
 <?php
 
-require 'PHPMailerAutoload.php';
+require '../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
 if($_SERVER['REQUEST_METHOD'] == "POST") {
 	$mail = new PHPMailer();  // Cree un nouvel objet PHPMailer
