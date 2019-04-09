@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Proxima';
+    src: url(../fonts/ProximaNova-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Proxima Bold';
+    src: url(../fonts/ProximaNova-Bold.otf);
+}
+
 html, body {
 	margin:0;border:0;padding:0;
 	font-size:14px;
@@ -839,4 +849,12 @@ button:focus {
 	left:calc(50% - 10px);
 	color:#666;
 	font-size:24px;
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
 }
