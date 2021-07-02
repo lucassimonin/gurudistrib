@@ -1,8 +1,7 @@
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
+	RewriteEngine On
 
-ErrorDocument 404 /404.html
-RedirectPermanent /index.html https://distrib.gurubeer.fr/
-RedirectPermanent /img/Peninsula.png https://distrib.gurubeer.fr/
+	RewriteRule ^index.html$ / [L,R=301] 
+
+	ErrorDocument 404 /404.html
 </IfModule>

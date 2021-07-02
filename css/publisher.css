@@ -602,12 +602,14 @@ footer .social a.facebook:before {background:#3b5998;}
 footer .social a.twitter:before {background:#55acee;}
 footer .social a.dribbble:before {background:#ea4c89;}
 footer .social a.vine:before {background:#00b488;}
+footer .social a.instagram:before {background:#DD077C;}
 footer .social a.google-plus:before {background:#dd4b39;}
 
 footer .social a.facebook:active {color:#3b5998;}
 footer .social a.twitter:active {color:#55acee;}
 footer .social a.dribbble:active {color:#ea4c89;}
 footer .social a.vine:active {color:#00b488;}
+footer .social a.instagram:active {color:#DD077C;}
 footer .social a.google-plus:active {color:#dd4b39;}
 
 /* Custom Styles */
