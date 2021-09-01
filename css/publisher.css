@@ -39,12 +39,15 @@ h6 {font-size:16px;}
 	color:#484d53;
 	font-family:'Proxima';
 	line-height:38px;
+} .heading_smaller {
+	font-size:22px !important;
+	line-height:30px !important;
 }
 
 .logo {
 	color:#484d53;
-	font-family:'Grand Hotel';
-	line-height:38px;
+	font-family: 'Grand Hotel', cursive;
+	line-height:55px;
 }
 
 .subheading {
@@ -121,6 +124,12 @@ p {
 p.small {
 	font-size:18px;
 	line-height: 36px;
+	color:#6a727b;
+}
+
+p.smaller {
+	font-size:15px;
+	line-height: 28px;
 	color:#6a727b;
 }
 
@@ -294,7 +303,7 @@ header .heading {
 }
 
 header .logo {
-	font-family:'Grand Hotel';
+	font-family: 'Grand Hotel', cursive;
 	color:#71DCD5;
 	font-size:70px;
 	margin:10px 0;
